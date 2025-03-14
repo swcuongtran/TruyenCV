@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "YURvLeA7+Dc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Public\\my_project\\C#\\TruyenCV\\TruyenCV.Share\\TruyenCV.Share.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.3\\microsoft.extensions.dependencyinjection.9.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.3\\microsoft.extensions.dependencyinjection.abstractions.9.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
