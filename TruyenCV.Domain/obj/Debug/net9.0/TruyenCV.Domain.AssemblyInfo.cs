@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TruyenCV.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab2c363a2f5b4a2aecd64da2ed611819f1d89102")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+973ab52c498ec85778f26a439fccf39fd42af741")]
 [assembly: System.Reflection.AssemblyProductAttribute("TruyenCV.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TruyenCV.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

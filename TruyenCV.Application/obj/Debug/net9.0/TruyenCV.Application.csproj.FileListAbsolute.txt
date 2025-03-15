@@ -1,0 +1,16 @@
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\bin\Debug\net9.0\TruyenCV.Application.deps.json
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\bin\Debug\net9.0\TruyenCV.Application.dll
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\bin\Debug\net9.0\TruyenCV.Application.pdb
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\bin\Debug\net9.0\TruyenCV.Domain.dll
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\bin\Debug\net9.0\TruyenCV.Domain.pdb
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\TruyenCV.Application.csproj.AssemblyReference.cache
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\TruyenCV.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\TruyenCV.Application.AssemblyInfoInputs.cache
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\TruyenCV.Application.AssemblyInfo.cs
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\TruyenCV.Application.csproj.CoreCompileInputs.cache
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\TruyenCV.Application.sourcelink.json
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\TruyenCV.0BF65860.Up2Date
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\TruyenCV.Application.dll
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\refint\TruyenCV.Application.dll
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\TruyenCV.Application.pdb
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Application\obj\Debug\net9.0\ref\TruyenCV.Application.dll

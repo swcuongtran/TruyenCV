@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TruyenCV.Domain.Entities
 {
-    class Role
+    public class Role
     {
+        public Guid RoleId { get; set; }  
+        public string Name { get; set; }
+        public ICollection<ApplicationUser> Users { get; set; } = new List<ApplicationUser>();
     }
 }

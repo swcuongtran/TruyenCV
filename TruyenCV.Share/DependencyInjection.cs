@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace TruyenCV.Share
 {
-    class DependencyInjection
+    public static class DependencyInjection
     {
+        public static IServiceCollection AddShareServices(this IServiceCollection services)
+        {
+            // Register shared services
+            // Example: services.AddTransient<ISharedService, SharedService>();
+
+            return services;
+        }
     }
 }

@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TruyenCV.Application\TruyenCV.Application.csproj" />
+    <ProjectReference Include="..\TruyenCV.Infrastructure\TruyenCV.Infrastructure.csproj" />
+    <ProjectReference Include="..\TruyenCV.Share\TruyenCV.Share.csproj" />
+  </ItemGroup>
+
 </Project>

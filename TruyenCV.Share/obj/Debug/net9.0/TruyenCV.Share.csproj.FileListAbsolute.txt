@@ -1,0 +1,13 @@
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\bin\Debug\net9.0\TruyenCV.Share.deps.json
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\bin\Debug\net9.0\TruyenCV.Share.dll
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\bin\Debug\net9.0\TruyenCV.Share.pdb
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\TruyenCV.Share.csproj.AssemblyReference.cache
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\TruyenCV.Share.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\TruyenCV.Share.AssemblyInfoInputs.cache
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\TruyenCV.Share.AssemblyInfo.cs
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\TruyenCV.Share.csproj.CoreCompileInputs.cache
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\TruyenCV.Share.sourcelink.json
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\TruyenCV.Share.dll
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\refint\TruyenCV.Share.dll
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\TruyenCV.Share.pdb
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.Share\obj\Debug\net9.0\ref\TruyenCV.Share.dll
