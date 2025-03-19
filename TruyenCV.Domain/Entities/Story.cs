@@ -15,6 +15,7 @@ namespace TruyenCV.Domain.Entities
         public string Genre { get; set; }
         public string Description { get; set; }
         public string CoverImageUrl { get; set; }
+        public int ViewCount { get; set; } = 0;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Quan hệ với Chapter

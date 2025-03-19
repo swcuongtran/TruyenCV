@@ -14,5 +14,6 @@ namespace TruyenCV.Domain.Repositories
         Task<Story> CreateStoryAsync(Story story);
         Task UpdateStoryAsync(Guid storyId, Story story);
         Task DeleteStoryAsync(Guid storyId);
+        Task IncrementViewCountAsync(Guid storyId);
     }
 }

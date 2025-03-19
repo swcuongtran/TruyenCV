@@ -11,9 +11,9 @@ using TruyenCV.Infrastructure.Identity;
 
 namespace TruyenCV.Infrastructure.Data
 {
-    public class IdentityDbContext: IdentityDbContext<IdentityAplicationUser>
+    public class IdentityDatabaseContext : IdentityDbContext<IdentityApplicationUser>
     {
-        public IdentityDbContext(DbContextOptions<IdentityDbContext> options) : base(options)
+        public IdentityDatabaseContext(DbContextOptions<IdentityDatabaseContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder builder)

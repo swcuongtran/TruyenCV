@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TruyenCV.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+973ab52c498ec85778f26a439fccf39fd42af741")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dfa9b7efd325eae0042d3f7ef95c79bd1bfaae5")]
 [assembly: System.Reflection.AssemblyProductAttribute("TruyenCV.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TruyenCV.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

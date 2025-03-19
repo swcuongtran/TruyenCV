@@ -13,6 +13,6 @@ namespace TruyenCV.Domain.Repositories
         Task AddCommentAsync(Comment comment);
         Task DeleteCommentAsync(Guid id);
         Task<int> CountCommentsByStoryIdAsync(Guid storyId);
-        Task<IEnumerable<Comment>> GetCommentsByStoryIdPagedAsync(Guid storyId, int page, int pageSize); // 🔹 Lấy bình luận có phân trang
+        Task<IEnumerable<Comment>> GetCommentsByStoryIdPagedAsync(Guid storyId, int page, int pageSize); 
     }
 }

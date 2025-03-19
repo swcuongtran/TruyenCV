@@ -19,8 +19,4 @@
     <ProjectReference Include="..\TruyenCV.Domain\TruyenCV.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>

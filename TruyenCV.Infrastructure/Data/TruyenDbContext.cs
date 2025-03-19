@@ -10,12 +10,13 @@ namespace TruyenCV.Infrastructure.Data
 {
     public class TruyenDbContext:DbContext
     {
-        public TruyenDbContext(DbContextOptions<TruyenDbContext> options) : base(options)
+        public TruyenDbContext(DbContextOptions<TruyenDbContext> options) : base(options)   
         {
         }
         public DbSet<Story> Stories { get; set; }
         public DbSet<Chapter> Chapters { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }    
         override protected void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Story>().HasKey(x => x.StoryId);
@@ -23,6 +24,8 @@ namespace TruyenCV.Infrastructure.Data
             modelBuilder.Entity<Comment>().HasKey(x => x.CommentId);
 
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ApplicationUser>().HasKey(x => x.UserId);
 
             modelBuilder.Entity<Story>()
                 .HasMany(s => s.Chapters)

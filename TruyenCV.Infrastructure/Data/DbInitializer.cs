@@ -12,7 +12,7 @@ namespace TruyenCV.Infrastructure.Data
     {
         public static async Task SeedRoles(RoleManager<IdentityRole> roleManager)
         {
-            string[] roles = { "Admin", "User", "Moderator" };
+            string[] roles = { "Admin", "User", "Moderator","Translator" };
 
             foreach (var role in roles)
             {

@@ -12,7 +12,7 @@ namespace TruyenCV.Infrastructure.Identity
     {
         public UserMappingProfile()
         {
-            CreateMap<ApplicationUser, IdentityAplicationUser>().ReverseMap();
+            CreateMap<ApplicationUser, IdentityApplicationUser>().ReverseMap();
         }
     }
 }
