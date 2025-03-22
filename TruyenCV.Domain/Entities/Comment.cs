@@ -11,7 +11,7 @@ namespace TruyenCV.Domain.Entities
         public Guid CommentId { get; set; }
         public Guid StoryId { get; set; }
         public Guid UserId { get; set; }
-        public string Content { get; set; }
+        public string Content { get; set; } = null!;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Quan hệ với Story

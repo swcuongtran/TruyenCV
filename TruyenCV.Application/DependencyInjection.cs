@@ -4,6 +4,8 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using TruyenCV.Application.Interfaces;
+using TruyenCV.Application.Services;
 
 namespace TruyenCV.Application
 {
@@ -21,7 +23,11 @@ namespace TruyenCV.Application
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
             // Register other application services
-            // Example: services.AddTransient<IMyService, MyService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IChapterService, ChapterService>();
+            services.AddScoped<IStoryService, StoryService>();
+            services.AddScoped<ICommentService, CommentService>();
 
             return services;
         }

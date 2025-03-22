@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TruyenCV.Application.Interfaces;
+using TruyenCV.Application.Services;
 using TruyenCV.Domain.Entities;
 using TruyenCV.Domain.Repositories;
 using TruyenCV.Infrastructure.Data;
@@ -26,13 +28,18 @@ namespace TruyenCV.Infrastructure
             services.AddIdentity<IdentityApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityDatabaseContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddScoped<UserManager<IdentityApplicationUser>>();
+            services.AddScoped<RoleManager<IdentityRole>>();
             // Đăng ký AutoMapper
-            services.AddAutoMapper(typeof(DependencyInjection).Assembly);
+            services.AddAutoMapper(typeof(UserMappingProfile));
 
             //Đang ký các Repository
             services.AddScoped<IChapterRepositoy, ChapterRepository>();
-          
-
+            services.AddScoped<IStoryRepository, StoryRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }

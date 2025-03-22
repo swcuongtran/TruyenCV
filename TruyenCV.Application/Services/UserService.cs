@@ -2,74 +2,59 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using Microsoft.AspNetCore.Identity;
 using TruyenCV.Application.DTOs;
 using TruyenCV.Application.Interfaces;
 using TruyenCV.Domain.Entities;
+using TruyenCV.Domain.Repositories;
 
 namespace TruyenCV.Application.Services
 {
     public class UserService : IUserService
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
 
-        public UserService(UserManager<ApplicationUser> userManager, IMapper mapper)
+        public UserService(IUserRepository userRepository, IMapper mapper)
         {
-            _userManager = userManager;
+            _userRepository = userRepository;
             _mapper = mapper;
         }
 
-        // ✅ Lấy danh sách User (Trả về DTO)
+        // ✅ Lấy danh sách user
         public async Task<IEnumerable<UserDto>> GetUsersAsync()
         {
-            var users = _userManager.Users;
+            var users = await _userRepository.GetUsersAsync();
             return _mapper.Map<IEnumerable<UserDto>>(users);
         }
 
-        // ✅ Lấy thông tin User theo ID (Trả về DTO)
+        // ✅ Lấy thông tin user theo ID
         public async Task<UserDto> GetUserByIdAsync(Guid userId)
         {
-            var user = await _userManager.FindByIdAsync(userId.ToString());
+            var user = await _userRepository.GetUserByIdAsync(userId);
             return user != null ? _mapper.Map<UserDto>(user) : null;
         }
 
-        // ✅ Tạo User mới (Không phụ thuộc vào Infrastructure)
+        // ✅ Tạo user mới
         public async Task<bool> CreateUserAsync(RegisterRequestDto request)
         {
-            var user = new ApplicationUser
-            {
-                UserName = request.Email,
-                Email = request.Email,
-                FullName = request.FullName
-            };
-
-            var result = await _userManager.CreateAsync(user, request.Password);
-            return result.Succeeded;
+            var user = _mapper.Map<ApplicationUser>(request);
+            return await _userRepository.CreateUserAsync(user, request.Password);
         }
 
-        // ✅ Cập nhật User
-        public async Task<bool> UpdateUserAsync(UserDto userDto)
+        // ✅ Cập nhật thông tin user
+        public async Task<bool> UpdateUserAsync(Guid userId, UpdateUserDto request)
         {
-            var user = await _userManager.FindByIdAsync(userDto.UserId.ToString());
+            var user = await _userRepository.GetUserByIdAsync(userId);
             if (user == null) return false;
 
-            user.FullName = userDto.FullName;
-            user.Email = userDto.Email;
-            user.UserName = userDto.Email;
-
-            var result = await _userManager.UpdateAsync(user);
-            return result.Succeeded;
+            _mapper.Map(request, user);
+            return await _userRepository.UpdateUserAsync(user);
         }
 
-        // ✅ Xóa User
+        // ✅ Xóa user
         public async Task<bool> DeleteUserAsync(Guid userId)
         {
-            var user = await _userManager.FindByIdAsync(userId.ToString());
-            if (user == null) return false;
-
-            var result = await _userManager.DeleteAsync(user);
-            return result.Succeeded;
+            return await _userRepository.DeleteUserAsync(userId);
         }
     }
 }

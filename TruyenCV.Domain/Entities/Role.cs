@@ -9,7 +9,7 @@ namespace TruyenCV.Domain.Entities
     public class Role
     {
         public Guid RoleId { get; set; }  
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
         public ICollection<ApplicationUser> Users { get; set; } = new List<ApplicationUser>();
     }
 }

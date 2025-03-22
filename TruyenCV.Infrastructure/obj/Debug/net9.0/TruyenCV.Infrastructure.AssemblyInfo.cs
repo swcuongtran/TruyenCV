@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TruyenCV.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dfa9b7efd325eae0042d3f7ef95c79bd1bfaae5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35dceb5cfadd8b5e2e51f729f403979398895faa")]
 [assembly: System.Reflection.AssemblyProductAttribute("TruyenCV.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TruyenCV.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

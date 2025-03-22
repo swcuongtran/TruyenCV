@@ -10,7 +10,7 @@ namespace TruyenCV.Application.Interfaces
         Task<IEnumerable<UserDto>> GetUsersAsync();
         Task<UserDto> GetUserByIdAsync(Guid userId);
         Task<bool> CreateUserAsync(RegisterRequestDto request);
-        Task<bool> UpdateUserAsync(UserDto userDto);
+        Task<bool> UpdateUserAsync(Guid Id,UpdateUserDto userDto);
         Task<bool> DeleteUserAsync(Guid userId);
     }
 }

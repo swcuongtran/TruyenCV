@@ -15,6 +15,15 @@ namespace TruyenCV.Application.Mapping
         public MappingProfile()
         {
             CreateMap<ApplicationUser, UserDto>().ReverseMap();
+            CreateMap<Chapter, ChapterDto>().ReverseMap();
+            CreateMap<CreateChapterDto, Chapter>()
+                .ForMember(dest => dest.ChapterId, opt => opt.Ignore()); // ✅ ID sẽ được DB tự sinh
+            CreateMap<UpdateChapterDto, Chapter>()
+                .ForMember(dest => dest.ChapterId, opt => opt.Ignore()) // Không được thay đổi ID
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()); // Không được sửa CreatedAt
+            CreateMap<Story, StoryDto>().ReverseMap();
+            CreateMap<Role, RoleDto>().ReverseMap();
+            CreateMap<RegisterRequestDto, ApplicationUser>().ReverseMap();
         }
     }
 }

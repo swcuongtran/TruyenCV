@@ -9,9 +9,8 @@ namespace TruyenCV.Domain.Repositories
 {
     public interface ICommentRepository
     {
-        Task<IEnumerable<Comment>> GetCommentsByStoryIdAsync(Guid storyId);
-        Task AddCommentAsync(Comment comment);
-        Task DeleteCommentAsync(Guid id);
+        Task<bool> AddCommentAsync(Comment comment);
+        Task<bool> DeleteCommentAsync(Guid id);
         Task<int> CountCommentsByStoryIdAsync(Guid storyId);
         Task<IEnumerable<Comment>> GetCommentsByStoryIdPagedAsync(Guid storyId, int page, int pageSize); 
     }

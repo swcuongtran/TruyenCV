@@ -10,11 +10,11 @@ namespace TruyenCV.Domain.Entities
     public class Story
     {
         public Guid StoryId { get; set; }
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public string Genre { get; set; }
-        public string Description { get; set; }
-        public string CoverImageUrl { get; set; }
+        public string Title { get; set; } = null!;
+        public string Author { get; set; } = null!;
+        public string Genre { get; set; } = null!;
+        public string Description { get; set; } = null!;
+        public string CoverImageUrl { get; set; } = null!;
         public int ViewCount { get; set; } = 0;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 

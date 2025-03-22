@@ -176,6 +176,9 @@ namespace TruyenCV.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("ViewCount")
+                        .HasColumnType("integer");
+
                     b.HasKey("StoryId");
 
                     b.ToTable("Stories");

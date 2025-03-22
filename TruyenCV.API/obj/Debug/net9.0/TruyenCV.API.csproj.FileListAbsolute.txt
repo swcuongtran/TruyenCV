@@ -238,3 +238,6 @@ C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.API\bin\Debug\net9.0\tr\Microsof
 C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.API\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.API\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Public\my_project\C#\TruyenCV\TruyenCV.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
