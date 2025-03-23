@@ -10,6 +10,9 @@ namespace TruyenCV.Application.DTOs
     public class RegisterRequestDto
     {
         [Required]
+        public string UserName { get; set; } = string.Empty;
+
+        [Required]
         [EmailAddress]
         public string Email { get; set; }
 

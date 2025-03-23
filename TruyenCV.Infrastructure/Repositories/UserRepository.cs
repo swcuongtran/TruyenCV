@@ -25,18 +25,50 @@ namespace TruyenCV.Infrastructure.Repositories
         public async Task<IEnumerable<ApplicationUser>> GetUsersAsync()
         {
             var users = await _userManager.Users.ToListAsync();
-            return _mapper.Map<IEnumerable<ApplicationUser>>(users);
+            var mappedUsers = _mapper.Map<IEnumerable<ApplicationUser>>(users);
+
+            foreach (var user in mappedUsers)
+            {
+                user.UserId = Guid.Parse(users.First(u => u.Id == user.UserId.ToString()).Id); // ✅ Fix ID Mapping
+            }
+
+            return mappedUsers;
         }
 
         public async Task<ApplicationUser> GetUserByIdAsync(Guid userId)
         {
             var user = await _userManager.FindByIdAsync(userId.ToString());
-            return user != null ? _mapper.Map<ApplicationUser>(user) : null;
+            if (user == null) return null;
+
+            var mappedUser = _mapper.Map<ApplicationUser>(user);
+            mappedUser.UserId = Guid.Parse(user.Id); // ✅ Fix ID Mapping
+            return mappedUser;
+        }
+
+        public async Task<ApplicationUser> GetUserByEmailAsync(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null) return null;
+
+            var mappedUser = _mapper.Map<ApplicationUser>(user);
+            mappedUser.UserId = Guid.Parse(user.Id); // ✅ Fix ID Mapping
+            return mappedUser;
+        }
+
+        public async Task<ApplicationUser> GetUserByUserNameAsync(string userName)
+        {
+            var user = await _userManager.FindByNameAsync(userName);
+            if (user == null) return null;
+
+            var mappedUser = _mapper.Map<ApplicationUser>(user);
+            mappedUser.UserId = Guid.Parse(user.Id); // ✅ Fix ID Mapping
+            return mappedUser;
         }
 
         public async Task<bool> CreateUserAsync(ApplicationUser user, string password)
         {
             var identityUser = _mapper.Map<IdentityApplicationUser>(user);
+            identityUser.Id = Guid.NewGuid().ToString(); // ✅ Tạo GUID cho ID
             var result = await _userManager.CreateAsync(identityUser, password);
             return result.Succeeded;
         }

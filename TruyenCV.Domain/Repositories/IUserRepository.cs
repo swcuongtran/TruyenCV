@@ -12,5 +12,7 @@ namespace TruyenCV.Domain.Repositories
         Task<bool> CreateUserAsync(ApplicationUser user, string password);
         Task<bool> UpdateUserAsync(ApplicationUser user);
         Task<bool> DeleteUserAsync(Guid userId);
+        Task<ApplicationUser> GetUserByEmailAsync(string email);
+        Task<ApplicationUser> GetUserByUserNameAsync(string userName);
     }
 }

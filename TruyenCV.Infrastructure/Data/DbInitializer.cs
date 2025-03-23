@@ -1,18 +1,16 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using TruyenCV.Domain.Entities;
+using TruyenCV.Infrastructure.Identity;
 
 namespace TruyenCV.Infrastructure.Data
 {
     public static class DbInitializer
     {
+        // ✅ Tạo các Role mặc định
         public static async Task SeedRoles(RoleManager<IdentityRole> roleManager)
         {
-            string[] roles = { "Admin", "User", "Moderator","Translator" };
+            string[] roles = { "Admin", "User", "Moderator", "Translator" };
 
             foreach (var role in roles)
             {
@@ -23,22 +21,28 @@ namespace TruyenCV.Infrastructure.Data
             }
         }
 
-        public static async Task SeedAdminUser(UserManager<ApplicationUser> userManager)
+        // ✅ Tạo tài khoản Admin nếu chưa có
+        public static async Task SeedAdminUser(UserManager<IdentityApplicationUser> userManager)
         {
             var adminEmail = "admin@example.com";
             var adminUser = await userManager.FindByEmailAsync(adminEmail);
 
             if (adminUser == null)
             {
-                var newAdmin = new ApplicationUser
+                var newAdmin = new IdentityApplicationUser
                 {
                     UserName = adminEmail,
                     Email = adminEmail,
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+                    FullName = "Administrator",
+                    CreatedAt = DateTime.UtcNow
                 };
 
-                await userManager.CreateAsync(newAdmin, "Admin@123");
-                await userManager.AddToRoleAsync(newAdmin, "Admin");
+                var result = await userManager.CreateAsync(newAdmin, "Admin@123");
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(newAdmin, "Admin");
+                }
             }
         }
     }

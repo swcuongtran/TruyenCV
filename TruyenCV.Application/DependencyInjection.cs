@@ -28,6 +28,7 @@ namespace TruyenCV.Application
             services.AddScoped<IChapterService, ChapterService>();
             services.AddScoped<IStoryService, StoryService>();
             services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             return services;
         }
